@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmad Ali — Ultra Ordinary Achievement</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #202020;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.certificate {
+    width: 1123px;
+    height: 794px;
+    margin: 40px auto;
+    padding: 32px;
+    background: #fafaf7;
+    position: relative;
+    color: #171717;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+
+/* OUTER BORDER */
+
+.outer-border {
+    position: absolute;
+    inset: 22px;
+    border: 2px solid #171717;
+    pointer-events: none;
+}
+
+.inner-border {
+    position: absolute;
+    inset: 32px;
+    border: 1px solid #b08d57;
+    pointer-events: none;
+}
+
+/* CORNERS */
+
+.corner {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border-color: #b08d57;
+    border-style: solid;
+}
+
+.corner.tl {
+    top: 39px;
+    left: 39px;
+    border-width: 2px 0 0 2px;
+}
+
+.corner.tr {
+    top: 39px;
+    right: 39px;
+    border-width: 2px 2px 0 0;
+}
+
+.corner.bl {
+    bottom: 39px;
+    left: 39px;
+    border-width: 0 0 2px 2px;
+}
+
+.corner.br {
+    bottom: 39px;
+    right: 39px;
+    border-width: 0 2px 2px 0;
+}
+
+/* HEADER */
+
+.header {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    margin-top: 48px;
+}
+
+.small-label {
+    color: #b08d57;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 43px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.subtitle {
+    margin-top: 7px;
+    color: #555;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.divider {
+    width: 320px;
+    height: 1px;
+    background: #b08d57;
+    margin: 16px auto 0;
+}
+
+/* MAIN */
+
+.presented {
+    text-align: center;
+    margin-top: 29px;
+    color: #555;
+    font-size: 12px;
+}
+
+.name {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+
+.description {
+    width: 720px;
+    margin: 8px auto 0;
+    text-align: center;
+    color: #555;
+    font-size: 11px;
+    line-height: 1.65;
+}
+
+/* THREE BOXES */
+
+.achievements {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.box {
+    width: 220px;
+    height: 66px;
+    border: 1px solid #d4c09a;
+    text-align: center;
+    padding-top: 13px;
+    background: rgba(255,255,255,0.45);
+}
+
+.box-title {
+    color: #b08d57;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.box-text {
+    margin-top: 8px;
+    font-size: 8.5px;
+    color: #555;
+}
+
+/* BOTTOM */
+
+.bottom {
+    position: absolute;
+    left: 80px;
+    right: 80px;
+    bottom: 62px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/* DATE */
+
+.info {
+    width: 210px;
+}
+
+.info-line {
+    margin-bottom: 14px;
+}
+
+.info-label {
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #222;
+}
+
+.info-value {
+    margin-top: 4px;
+    font-size: 9px;
+    color: #555;
+}
+
+/* SIGNATURE */
+
+.signature {
+    width: 220px;
+    text-align: center;
+}
+
+.signature-space {
+    height: 57px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.signature-placeholder {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-style: italic;
+    color: #333;
+    transform: rotate(-5deg);
+}
+
+.signature-line {
+    height: 1px;
+    background: #222;
+    width: 180px;
+    margin: 2px auto 8px;
+}
+
+.role {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.authorized {
+    margin-top: 4px;
+    color: #777;
+    font-size: 7px;
+    font-style: italic;
+}
+
+/* FOOTER */
+
+.footer {
+    position: absolute;
+    bottom: 29px;
+    left: 100px;
+    right: 100px;
+    text-align: center;
+    font-size: 6.5px;
+    color: #777;
+}
+
+/* PRINT */
+
+@media print {
+
+    body {
+        background: white;
+    }
+
+    .certificate {
+        margin: 0;
+        box-shadow: none;
+        width: 297mm;
+        height: 210mm;
+    }
+
+    @page {
+        size: A4 landscape;
+        margin: 0;
+    }
+
+}
+
+@media(max-width:900px) {
+
+    .certificate {
+        transform: scale(0.7);
+        transform-origin: top left;
+        margin-bottom: -230px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="certificate">
+
+    <div class="outer-border"></div>
+    <div class="inner-border"></div>
+
+    <div class="corner tl"></div>
+    <div class="corner tr"></div>
+    <div class="corner bl"></div>
+    <div class="corner br"></div>
+
+    <div class="header">
+
+        <div class="small-label">
+            PERSONAL • COMMEMORATIVE • NON-OFFICIAL
+        </div>
+
+        <h1>
+            ULTRA ORDINARY ACHIEVEMENT
+        </h1>
+
+        <div class="subtitle">
+            CERTIFICATE OF PERSONALITY, LIFE & PROFESSIONAL GROWTH
+        </div>
+
+        <div class="divider"></div>
+
+    </div>
+
+    <div class="presented">
+        This certificate is proudly presented to
+    </div>
+
+    <div class="name">
+        AHMAD ALI
+    </div>
+
+    <div class="description">
+        In recognition of an individual journey marked by curiosity,
+        self-development, ambition, resilience, learning, and the
+        continuous pursuit of becoming better.
+    </div>
+
+    <div class="achievements">
+
+        <div class="box">
+            <div class="box-title">
+                PERSONALITY
+            </div>
+
+            <div class="box-text">
+                Character • Curiosity • Confidence
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box-title">
+                LIFE
+            </div>
+
+            <div class="box-text">
+                Growth • Experience • Resilience
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box-title">
+                PROFESSIONAL
+            </div>
+
+            <div class="box-text">
+                Learning • Discipline • Ambition
+            </div>
+        </div>
+
+    </div>
+
+    <div class="bottom">
+
+        <div class="info">
+
+            <div class="info-line">
+
+                <div class="info-label">
+                    DATE
+                </div>
+
+                <div class="info-value">
+                    07 OCTOBER 2026
+                </div>
+
+            </div>
+
+            <div class="info-line">
+
+                <div class="info-label">
+                    CERTIFICATE
+                </div>
+
+                <div class="info-value">
+                    AA-2026-001
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="signature">
+
+            <div class="signature-space">
+
+                <div class="signature-placeholder">
+                    Signature
+                </div>
+
+            </div>
+
+            <div class="signature-line"></div>
+
+            <div class="role">
+                HOST / CEO
+            </div>
+
+            <div class="authorized">
+                Authorized Commemorative Signatory
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+
+        Created as a personal commemorative achievement document;
+        it is not an official academic, employment, governmental,
+        or professional credential.
+
+    </div>
+
+</div>
+
+</body>
+</html>
